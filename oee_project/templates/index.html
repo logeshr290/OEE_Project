@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to OEE Calculator</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to OEE Calculator</h1>
+    </header>
+    <main>
+        <p>This is the homepage of the OEE Calculator application.</p>
+        <a href="{% url 'oee-calculation' %}" class="btn">Calculate OEE</a>
+        {% if calculated_oee %}
+        <div class="result">
+            <p>Calculated OEE: {{ calculated_oee }}</p>
+        </div>
+        {% endif %}
+        <!-- Add your content here -->
+    </main>
+    <footer>
+        <p>&copy; 2024 OEE Calculator. All rights reserved.</p>
+    </footer>
+    <!-- Add your JavaScript scripts or links here -->
+</body>
+</html>
